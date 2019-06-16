@@ -8,6 +8,9 @@
   pointer-events: none;
 }
 
+body{
+  background: rgb(63, 63, 63);
+}
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -30,4 +33,9 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+h1 {
+  font-size: 54px;
+  color: pink;
 }
