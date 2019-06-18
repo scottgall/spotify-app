@@ -110,12 +110,7 @@ class App extends Component {
     }
   }
   componentDidMount() {
-    setTimeout(() => {
-      this.setState({serverData: fakeServerData})
-    }, 1000);
-    setTimeout(() => {
-      this.setState({filterString: ''})
-    }, 2000);
+
   }
   render() {
     let playlistToRender = this.state.serverData.user ? this.state.serverData.user.playlists
@@ -136,7 +131,7 @@ class App extends Component {
           {playlistToRender.map((playlist, i) =>
             <Playlist key={i} playlist={playlist} />
           )}
-        </div> : <h1 style={defaultStyle}>loading</h1>
+        </div> : <button onClick={() => window.location='http://localhost:8888/login' } style={{padding: '20px', 'font-size': '50px', 'margin-top': '20px'}}>sign in</button>
         }
       </div>
     );
